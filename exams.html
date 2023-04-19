@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SI 339: Exams</title>
+    <link rel="stylesheet" href="css/Normal.css">
+    <style>
+      .skip-to-main-content-link {    
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background-color: white;
+        color: black;
+        padding: 10px;
+        z-index: 9999;
+        transition: top 0.3s ease-in-out;
+      }
+
+      .skip-to-main-content-link:focus {
+        top: 0;
+      }
+
+      .skip-to-main-content-link:not(:focus) {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./exams.html" class="current-page">Exams</a>
+      <a href="./homeWork.html">Homework</a>
+ 
+    </nav>
+
+    <header>
+      <h1>Exams</h1>
+      <p>Exams in this class hold a large majority of your grade. Being well prepared for them could make or break your SI 339 experience</p>
+      
+
+    </header>
+
+    <section>
+      <main id = "main">
+        <h2> What are the exams like? </h2>
+        <p> The exams in this class directly cover the content that is discussed during lecture and that is given out during homework and projects. </p>
+        <p> Some content covered in the exams includes: </p>
+        <ul>
+            <li>Web concepts and principals</li>
+            <li> CSS and HTML syntax </li>
+            <li>Implemented grid and creating grids in CSS </li>
+            <li>Utilizing java to create more immersive web experiences </li>
+          </ul>
+
+        
+          <h2>How to prepare for exams? </h2>
+          <p> If you're looking to prepare for coding exams in SI 339, a web development class, there are a few steps you can take to ensure you're well-prepared. First and foremost, take advantage of all the resources provided by the class, such as reviews, homework assignments, readings, and office hours. Make sure you're keeping up with the coursework and completing all assignments on time. Additionally, consider forming study groups with your classmates to work through challenging concepts together. Practice coding regularly and take advantage of online resources, such as coding tutorials and online communities, to supplement your learning. Finally, don't hesitate to ask your instructor for help or clarification on any topics you're struggling with. By following these tips, you'll be well-prepared for coding exams in SI 339 and set yourself up for success in the class.
+        </p>
+  
+
+      <h2>When are the exams?</h2>
+      <p>The exams will take place during lecture on the following dates:</p>
+      <ol>
+        <li>AExam #1: Thursday February 2nd 8:30 - 9:50 am</li>
+        <li> Exam #2: Thursday March 16th  8:30- 9:50 am</li>
+        <li>Exam #3: Thursday April 13th 8:30 - 9:50 am</li>
+        <li>Make-up exam:  Thursday April 20th 1:30-3:30 pm</li>
+      </ol>
+
+    <h2> Advice for exam day?</h2> 
+    <p>Some general tips and tricks I have learned from taking the exams myself: </p>
+    <ul>
+      <li>Get a good night's sleep the night before the exam. </li> 
+      <li> Eat a healthy breakfast on the day of the exam.</li>
+      <li>Arrive at the exam location early to give yourself time to get settled and mentally prepared. </li>
+      <li> Read all instructions carefully before beginning the exam.</li>
+      <li>Manage your time effectively during the exam, taking breaks if needed.</li> 
+      <li>Double-check your work before submitting the exam.</li> 
+      <li> Stay calm and focused, and don't get too bogged down on any one question. </li>
+
+    </ul>
+      
+    </section>
+    <form>
+      <label>
+        Font size:
+        <button type="button" onclick="decreaseFontSize()">-</button>
+        <span id="fontSize">16</span>
+        <button type="button" onclick="increaseFontSize()">+</button>
+      </label>
+      
+      <button type="button" onclick="resetSettings()">Reset settings</button>
+    </form>
+    
+    <script>
+      function increaseFontSize() {
+        var fontSizeSpan = document.getElementById('fontSize');
+        var currentFontSize = parseInt(fontSizeSpan.textContent);
+        if (currentFontSize < 24) {
+          fontSizeSpan.textContent = currentFontSize + 1;
+          document.body.style.fontSize = fontSizeSpan.textContent + 'px';
+        }
+      }
+      
+      function decreaseFontSize() {
+        var fontSizeSpan = document.getElementById('fontSize');
+        var currentFontSize = parseInt(fontSizeSpan.textContent);
+        if (currentFontSize > 10) {
+          fontSizeSpan.textContent = currentFontSize - 1;
+          document.body.style.fontSize = fontSizeSpan.textContent + 'px';
+        }
+      }
+      
+      function resetSettings() {
+        var fontSizeSpan = document.getElementById('fontSize');
+        fontSizeSpan.textContent = '16';
+        document.body.style.fontSize = '16px';
+        var noneRadio = document.getElementById('colorSchemeNone');
+        noneRadio.checked = true;
+        setColorScheme();
+      }
+  
+  
+    </script>
+    
+      
+  </body>

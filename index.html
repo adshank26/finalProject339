@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SI 339: Introduction to Web Development</title>
+ 
+    <link rel="stylesheet" href="css/Normal.css">
+
+    <link id="normal-css" rel="stylesheet" href="normal.css">
+  
+   
+    
+
+
+
+
+    <style>
+      .skip-to-main-content-link {    
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background-color: white;
+        color: black;
+        padding: 10px;
+        z-index: 9999;
+        transition: top 0.3s ease-in-out;
+      }
+
+      .skip-to-main-content-link:focus {
+        top: 0;
+      }
+
+      .skip-to-main-content-link:not(:focus) {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+    <nav>
+      <a href="./index.html" class="current-page">Home</a>
+      <a href="./exams.html">Exams</a>
+      <a href="./homeWork.html">Homework</a>
+     
+    </nav>
+
+   
+    <header>
+      <h1>SI 339: Introduction to Web Development</h1>
+      <p>Welcome to SI 339, where you will learn the basics of web development and create your own websites from scratch. This class is designed for beginners and will cover HTML, CSS, and JavaScript.</p>
+      <p>Expect to spend about 8 hours per week on this class, including class time, readings, assignments, and projects.</p>
+    </header>
+
+    <section>
+      <main id = "main"> 
+        <h2> What will you learn? </h2>
+        <p> The purpose of this course is to provide students with all necessary skills for building and deployinging websites.</p>
+        <p> Some content covered in the course includes: </p>
+        <ul>
+            <li>Understanding the interactions between web browsers and web servers using Hypertext Transport Protocol (HTTP)</li>
+            <li> Understanding the importance of standards-based practices in web development </li>
+            <li>Understanding the importance of separating structure and semantics from presentation, as well as how this is accomplished in professional web development</li>
+            <li>Creating web pages using Hypertext Markup Language (HTML5)</li>
+            <li> Styling web pages using Cascading Style Sheets (CSS3) </li>
+            <li>Using JavaScript for basic validation and interaction.</li> 
+            <li> Lastly, Using other software tools to augment and review the syntax, semantics, and accessibility of your site.</li>
+          </ul>
+
+        
+          <h2>How is the Class Set up? </h2>
+          <p> This is designed as an in-person course and it is expected that students will be available in-person for all lectures and discussions.  Of course we understand that things do arise and we want students to focus on their health and well-being.   Therefore, efforts will be made to record all lectures, but the quality is often degraded from the in-person experience.   However, after nine (9) absences of any type, you will lose the participation points for this course.  
+        </p>
+        <p> In the past the lectures were a comprehensive coverage of the readings.  This year it will be expected that students complete all of the readings and the lectures will highlight the material.   Discussion sections will be an integral part of getting support in this class and students may only attend the discussion section for which they are enrolled.   Discussions will always involve group/paired work, and the second lecture of each week will be used for hands-on learning as well as student demonstrations.
+        </p>
+
+      <h2>Projects</h2>
+      <p>Throughout the course, you will work on several projects that will help you apply the concepts you've learned and build your own websites:</p>
+      <ul>
+        <li>A company website</li>
+        <li> An Uno tuturial </li>
+        <li>Personal portfolio website</li>
+        <li>Anything you can build with the knowledge provided by the course</li>
+      </ul>
+      <p>Here are some images you will become familiar with as you go on with this course:</p>
+      <div class="container">
+        <img src="images/UnoWebsiteSS.png" alt="Uno website">
+        <img src="images/cssimg.jpeg" alt="CSS pic">
+        <img src="images/HTMLimg.png" alt="HTML pic">
+        <img src="images/hw4.png" alt="Homework 4 picture">
+        <img src="images/hw5.png" alt="Homework 5 picture">
+        <img src="images/computer.png" alt="computer image of code">
+        <img src="images/jackie.jpg" alt="Jackie Wolfe">
+        <img src="images/umma.jpg" alt="Umma lecture hall">
+        <img src = "images/jsimg.png" alt = "Java script symbol">
+      </div>
+    </section>
+    
+    </section>
+    
+    
+    
+    <form>
+    <label>
+      Font size:
+      <button type="button" onclick="decreaseFontSize()">-</button>
+      <span id="fontSize">16</span>
+      <button type="button" onclick="increaseFontSize()">+</button>
+    </label>
+    
+    <button type="button" onclick="resetSettings()">Reset settings</button>
+  </form>
+  
+  <script>
+    function increaseFontSize() {
+      var fontSizeSpan = document.getElementById('fontSize');
+      var currentFontSize = parseInt(fontSizeSpan.textContent);
+      if (currentFontSize < 24) {
+        fontSizeSpan.textContent = currentFontSize + 1;
+        document.body.style.fontSize = fontSizeSpan.textContent + 'px';
+      }
+    }
+    
+    function decreaseFontSize() {
+      var fontSizeSpan = document.getElementById('fontSize');
+      var currentFontSize = parseInt(fontSizeSpan.textContent);
+      if (currentFontSize > 10) {
+        fontSizeSpan.textContent = currentFontSize - 1;
+        document.body.style.fontSize = fontSizeSpan.textContent + 'px';
+      }
+    }
+    
+    function resetSettings() {
+      var fontSizeSpan = document.getElementById('fontSize');
+      fontSizeSpan.textContent = '16';
+      document.body.style.fontSize = '16px';
+      var noneRadio = document.getElementById('colorSchemeNone');
+      noneRadio.checked = true;
+      setColorScheme();
+    }
+
+
+  </script>
+    
+  </body>
+</html>

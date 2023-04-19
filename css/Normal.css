@@ -1,0 +1,448 @@
+@media only screen and (max-width: 767px){
+/* Grid container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* change to one column for smaller screens */
+    grid-gap: 10px;
+  }
+  
+  .container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .container img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  /* Background color */
+  body {
+    background-color: #f0f8ff;
+  }
+  
+  header {
+    background-color: #add8e6;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    background-color: #87cefa;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #00008b;
+    text-align: center; /* center align headings */
+    font-family: monospace;
+  }
+  
+  li {
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Gill Sans' , 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* increase font size of all text in paragraphs and lists 
+    /* increase font size of all text in lists */
+  }
+  
+  p {
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* increase font size of all text in paragraphs and lists */
+    /* increase font size of all text in paragraphs */
+  }
+  
+  nav {
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  nav a {
+    color: orange;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  nav a.current-page {
+    font-weight: bold;
+    font-size: 200%;
+  }
+  
+  nav a.active {
+    background-color: rgb(56, 14, 14);
+    color: #000;
+  }
+  
+  .Hwcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .Hwcontainer img {
+    width: 100%; /* change to percentage value for responsiveness */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .Hwcontainer img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+  
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+       
+      
+
+/* Grid container for desktop */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    }
+    
+p, li {
+          font-size: 1.2em;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* increase font size of all text in paragraphs and lists */
+        }
+    .container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out; 
+    }
+    
+    .container img:hover {
+    transform: scale(1.05); /* add scaling effect on hover */
+    cursor: pointer;
+    }
+    
+    /* Background color */
+    body {
+    background-color: #f0f8ff;
+    }
+
+
+   
+    header {
+    background-color: #add8e6;
+    padding: 20px; 
+    text-align: center; 
+    }
+    
+
+    main {
+    background-color: #87cefa;
+    padding: 20px;
+    }
+    
+    h1, h2 {
+    color: #00008b;
+    text-align: center;
+    font-family: monospace;
+
+    }
+    
+
+    li {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* increase font size of all text in paragraphs and lists */
+
+
+    }
+    
+
+    nav {
+    background-color: black;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center; 
+    
+    }
+    
+
+    nav a {
+    color: orange;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out; 
+    }
+    
+    nav a.current-page {
+    font-weight: bold;
+    font-size: 200%;
+    }
+    
+    nav a.active {
+    background-color: rgb(56, 14, 14);
+    color: #000;
+    }
+    
+
+    .Hwcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      /* Add the following CSS to set 2 images per row */
+      .Hwcontainer > * {
+        flex-basis: calc(40% - 10px);
+        margin: 5px;
+      }
+      
+    
+    .Hwcontainer img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    transition: all 0.2s ease-in-out; 
+    
+    }
+    
+    .Hwcontainer img:hover {
+    transform: scale(1.05); 
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    }
+}
+
+
+      
+        
+
+
+@media screen and (min-width: 1024px){
+
+
+/* Grid container for desktop */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    }
+    
+
+    .container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out; 
+    }
+    
+    .container img:hover {
+    transform: scale(1.05); /* add scaling effect on hover */
+    cursor: pointer;
+    }
+    
+    /* Background color */
+    body {
+    background-color: #f0f8ff;
+    }
+    
+    
+   
+    header {
+    background-color: #add8e6;
+    padding: 20px; 
+    text-align: center; 
+    }
+    
+
+    main {
+    background-color: #87cefa;
+    padding: 20px;
+    }
+    
+    h1, h2 {
+    color: #00008b;
+    font-family: monospace;
+     
+    }
+    
+
+    li {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* increase font size of all text in paragraphs and lists */
+
+    
+    }
+    p {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* increase font size of all text in paragraphs and lists */
+
+    }
+
+    nav {
+    background-color: black;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center; 
+    }
+    
+
+    nav a {
+    color: orange;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out; 
+    }
+    
+    nav a.current-page {
+    font-weight: bold;
+    font-size: 200%;
+    }
+    
+    nav a.active {
+    background-color: rgb(56, 14, 14);
+    color: #000;
+    }
+    
+
+    .Hwcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; 
+    }
+    
+    .Hwcontainer img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    transition: all 0.2s ease-in-out; 
+    }
+    
+    .Hwcontainer img:hover {
+    transform: scale(1.05); 
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    }
+}
+ 
+      
+   
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+label {
+  margin-right: 20px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+#fontSize {
+  margin: 0 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: #eee;
+}
+
+button:not(:disabled) {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:not(:disabled):active {
+  box-shadow: none;
+}
+
+button:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+
+button:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
+
+button:disabled:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+
+button:disabled:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button[type="button"] {
+  margin-right: 10px;
+}
+
+button[type="reset"] {
+  background-color: #ff6347;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button[type="reset"]:hover {
+  background-color: #ff523d;
+}
+
+button[type="reset"]:active {
+  box-shadow: none;
+}
+
+button[type="reset"]:focus {
+  outline: none;
+}
+
+button[type="reset"]::-moz-focus-inner {
+  border: 0;
+}
+
